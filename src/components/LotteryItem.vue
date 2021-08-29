@@ -8,8 +8,8 @@
 -->
 <template>
   <div class="lottery_item">
-    <img :src="src" />
-    <span :title="describe">{{ describe }}</span>
+    <img :src="image" />
+    <span :title="name">{{ name }}</span>
   </div>
 </template>
 
@@ -17,8 +17,8 @@
 export default {
   name: "LotteryItem",
   props: {
-    src: String,
-    describe: String,
+    image: String,
+    name: String,
     userInfo: {
       type: Object,
       default() {
