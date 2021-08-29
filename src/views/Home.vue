@@ -1,23 +1,21 @@
 <template>
-  <div class="home is-flex">
-    <div>
+  <div class="home">
+    <div class="container_left">
       <Module title="幸运抽奖">
         <Lottery />
       </Module>
     </div>
-    <div>
+
+    <div class="container-right">
+      <Module title="我的奖品">
+        <Prize />
+      </Module>
+
       <Module title="抽奖纪录">
         <Record />
         <Record />
         <Record />
         <Record />
-      </Module>
-      <Module title="我的奖品">
-        <Prize />
-        <Prize />
-        <Prize />
-        <Prize />
-        <Prize />
       </Module>
     </div>
   </div>
@@ -42,7 +40,16 @@ export default {
 
 <style lang="scss">
 .home {
-  width: 1024px;
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 24px 48px;
+  display: flex;
+  justify-content: center;
+  .container_left {
+    width: 480px;
+  }
+  .container_right {
+  }
 }
 </style>

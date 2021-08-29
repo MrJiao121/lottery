@@ -7,13 +7,41 @@
  * @FilePath     : \lottery\src\components\lotteryItem.vue
 -->
 <template>
-  <div>
-    <div>单个奖品</div>
+  <div class="lottery_item">
+    <img :src="src" />
+    <span :title="describe">{{ describe }}</span>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "LotteryItem",
+  props: {
+    src: String,
+    describe: String,
+    userInfo: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+  },
+};
 </script>
 
-<style></style>
+<style lang="scss">
+.lottery_item {
+  width: 76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+</style>
